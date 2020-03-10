@@ -16,6 +16,13 @@ public function __construct($_prezzo, $_taglia, $_genere = 'Unisex')
     $this->taglia = $_taglia;
     $this->genere = $_genere;
   }
+
+  public function getPrice() {
+    if (!is_int($this->prezzo)) {
+      die('non è un prezzo');
+      }
+    return $this->prezzo. ' euro';
+  }
 }
 
 $bomber = new Product(80, 'L', 'Woman');
