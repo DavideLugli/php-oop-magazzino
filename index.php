@@ -9,4 +9,5 @@ echo $pullover->getPrice();
 
 var_dump($flameHoodie);
 echo $flameHoodie->getSleeves();
+echo $flameHoodie->getMaterial();
  ?>

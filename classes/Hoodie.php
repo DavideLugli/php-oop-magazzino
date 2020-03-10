@@ -1,8 +1,10 @@
 <?php
 require_once 'Product.php';
+require_once __DIR__ . '/../traits/GetMaterial.php';
 
 class Hoodie extends Product
 {
+  use GetMaterial;
   public $fit;
   public $sleeves;
 
@@ -26,5 +28,6 @@ class Hoodie extends Product
 
 $flameHoodie = new Hoodie(50, 'L');
 $flameHoodie->fit= 'Oversize';
+$flameHoodie->tessuto= 'Cotone';
 
  ?>
