@@ -9,9 +9,9 @@ public $stagione;
 
 public function __construct($_prezzo, $_taglia, $_genere = 'Unisex')
 {
-  if (!is_int($_prezzo)) {
-    die('non è un prezzo');
-    }
+  // if (!is_int($_prezzo)) {
+  //   die('non è un prezzo');
+  //   }
     $this->prezzo = $_prezzo;
     $this->taglia = $_taglia;
     $this->genere = $_genere;

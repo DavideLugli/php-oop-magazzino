@@ -6,10 +6,15 @@ class Hoodie extends Product
   public $fit;
   public $sleeves;
 
+  // public function __construct($_sleeves = 'Long')
+  // {
+  //     $this->sleeves = $_sleeves;
+  //   }
   public function __construct($_sleeves = 'Long')
   {
-      $this->sleeves = $_sleeves;
-    }
+  parent::__construct($_prezzo, $_taglia, $_genere);
+  $this->sleeves = $_sleeves;
+  }
 
   public function getSleeves()
    {
@@ -18,8 +23,10 @@ class Hoodie extends Product
 
 }
 
-$flameHoodie = new Hoodie('Short');
+$flameHoodie = new Hoodie('Short', 50, 'L', 'Man');
+// $flameHoodie->prezzo = 50;
+// $flameHoodie->taglia = 'L';
+// $flameHoodie->genere = 'Man';
 $flameHoodie->fit= 'Oversize';
-$flameHoodie->prezzo= 50;
 
  ?>
